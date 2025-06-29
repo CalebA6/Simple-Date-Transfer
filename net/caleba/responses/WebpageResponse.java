@@ -18,8 +18,12 @@ public class WebpageResponse {
 	}
 	
 	private String getReceivedMessage() {
+		String message = Controller.getMessage();
+		message = message.replace("\r\n", "<br>");
+		message = message.replace("\n", "<br>");
+		message = message.replace("\r", "<br>");
 		// Maybe want to consider CSS at some point in the future.
-		return "<td style=\"border: 1px solid; vertical-align: top; \">Received Message: <br>" + Controller.getMessage() + "</td>";
+		return "<td style=\"border: 1px solid; vertical-align: top; \">Received Message: <br>" + message + "</td>";
 	}
 	
 	private String getSendMessage() {
