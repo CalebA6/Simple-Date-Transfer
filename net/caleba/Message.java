@@ -19,7 +19,7 @@ public class Message extends JFrame {
 
 	Message(String message) {
 		super("New Message");
-		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 		Container pane = getContentPane();
 		pane.add(new JLabel("New Message: "), BorderLayout.PAGE_START);
 		JTextComponent text = new JTextArea(message);
